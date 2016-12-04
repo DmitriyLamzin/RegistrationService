@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:remove="all">Template for HTML email with inline image</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1 th:text="#{registration.greeting}">
+    Thank you for registration!
+</h1>
+<!--<p>-->
+    <!--<img src="sample.png" th:src="@{/mail/pic/imageResourceName}" />-->
+<!--</p>-->
+<p th:text="#{registration.success}">
+    You have successfully created account on our site.
+</p>
+<p th:text="#{registration.data(${emailAddress}, ${password})}">
+</p>
+
+<p th:text="#{registration.confirmation.request}">
+    To confirm your account please click on this link:
+</p>
+<a th:href="${confirmationUrl}" th:text="${confirmationUrl}"></a>
+</body>
+</html>

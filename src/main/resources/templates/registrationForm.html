@@ -1,0 +1,22 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div class="two.columns" style="margin-top: 10%" align="center">
+        <h4 class="text-center" th:text="#{view.registration}"></h4>
+        <form id="registrationForm" method="POST" th:object="${user}" th:action="@{/registration/form}">
+            <label for="email" th:text="#{view.email}">Email:</label>
+            <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+               th:errorclass="fieldError">
+            Incorrect date</p>
+            <input type="text" id="email" name="email" th:field="*{email}" />
+            <label for="pass" th:text="#{view.password}">Password:</label>
+            <p th:if="${#fields.hasErrors('password')}"
+               th:errors="*{password}" th:errorclass="fieldError">
+                Incorrect date</p>
+            <input type="password" id="pass" name="password" th:field="*{password}" />
+            <div>
+                <input class="button-primary" id="submit" value="Submit" th:value="#{view.submit}" type="submit" />
+            </div>
+         </form>
+    </div>
+</body>
+</html>

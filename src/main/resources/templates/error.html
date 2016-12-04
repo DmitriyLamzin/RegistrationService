@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/css/normalize.css}" />
+    <link rel="stylesheet" th:href="@{/css/skeleton.css}" />
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{/css/error.css}"/>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="hero-unit center">
+                    <h1 th:text="#{${msg}}"></h1><span th:text="${#response.getStatus()} "></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
