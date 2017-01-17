@@ -1,4 +1,4 @@
-# RegistrationService
+# RegistrationService ![alt text](https://travis-ci.org/DmitriyLamzin/RegistrationService.svg?branch=master)
 
 Simple registration service with two supported Locales (english and russian).
 
@@ -21,5 +21,5 @@ Stack of technology:
 * `hsqldb` embedded database;
 * `activeMQ` - message broker with SpringJMS support to send emails;
 * `skeleton` - css framework;
-* `Thymeleafe` as view template;
+* `Thymeleaf` as view template;
 * `travic-ci` for continuous integration.
